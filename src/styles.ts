@@ -44,7 +44,7 @@ export const Hero = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 40px 0 80px;
 `
 
 export const Texto = styled.h1`
