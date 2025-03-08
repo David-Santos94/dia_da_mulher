@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AudioPlayer from './components/AudioPlayer'
+import {
+  BkGround,
+  Container,
+  GlobalCss,
+  Overlay,
+  Texto,
+  Galeria,
+  Fotos,
+  Hero
+} from './styles'
+import foto from './assets/images/foto.jpeg'
+import foto1 from './assets/images/foto1.jpeg'
+import foto3 from './assets/images/foto3.jpeg'
+import foto4 from './assets/images/foto4.jpeg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalCss />
+      <Overlay />
+      <BkGround />
+      <Container>
+        <Hero>
+          <Texto>
+            Uma mulher de valor; feliz quem a encontrar! É muito mais valiosa
+            que os rubis.
+          </Texto>
+          <AudioPlayer />
+        </Hero>
+        <Galeria>
+          <Fotos src={foto} alt="foto" />
+          <Fotos src={foto1} alt="foto1" />
+          <Fotos src={foto4} alt="foto4" />
+          <Fotos src={foto3} alt="foto3" />
+        </Galeria>
+        <Texto>Te amo demais xuxu!</Texto>
+      </Container>
+    </>
+  )
 }
 
-export default App;
+export default App
